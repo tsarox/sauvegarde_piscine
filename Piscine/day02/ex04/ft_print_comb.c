@@ -6,26 +6,54 @@
 /*   By: nchin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 01:29:56 by nchin             #+#    #+#             */
-/*   Updated: 2018/09/02 05:34:50 by nchin            ###   ########.fr       */
+/*   Updated: 2018/09/04 22:14:17 by nchin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
 
-int		ft_putchar(char c)
+#include <unistd.h>
+
+int		ft_putchar(char x)
 {
-	write (1, &c, 1);
-	return(0);
+	write(1, &x, 1);
+	return (0);
 }
 
-int		ft_print_comb()
+int		ft_affichage(char a, char b, char c)
 {
-	int i;
-	int j;
-	int k;
-
-	while ( i == '0'; i <= '7'; i++ || j = = i + '1'; j <= '8'; j++ || k == '2'; k <= '8'; k++ )
+	ft_putchar(a);
+	ft_putchar(b);
+	ft_putchar(c);
 	{
-		ft_putchar(i, j, k)
+		if (a != '7' || b != '8' || c != '9')
+		{
+			ft_putchar(',');
+			ft_putchar(' ');
+		}
+	}
+	return (0);
+}
+
+int		ft_print_comb(void)
+{
+	int a;
+	int b;
+	int c;
+
+	a = '0';
+	while (a <= '7')
+	{
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				ft_affichage(a, b, c);
+				c++;
+			}
+			b++;
+		}
+		a++;
 	}
 }
 

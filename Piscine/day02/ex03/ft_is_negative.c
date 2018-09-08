@@ -6,7 +6,7 @@
 /*   By: nchin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 03:20:39 by nchin             #+#    #+#             */
-/*   Updated: 2018/09/01 23:12:27 by nchin            ###   ########.fr       */
+/*   Updated: 2018/09/08 23:40:21 by nchin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,16 @@ int		ft_putchar(char c)
 	return (0);
 }
 
-void	ft_is_negative(void)
+void	ft_is_negative(int n)
 {
-	int i;
-
-	if ('0' >= 'n')
-	{
-		ft_putchar('n');
-	}
+	if (n >= '0')
+		ft_putchar('P');
 	else
-	{
-		ft_putchar('p');
-	}
+		ft_putchar('N');
 }
 
-int		main()
+int		main(void)
 {
-	ft_is_negative(10);
+	ft_is_negative(-54646843);
 	return (0);
 }

@@ -1,16 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   sudoku.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nchin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/02 05:21:23 by nchin             #+#    #+#             */
-/*   Updated: 2018/09/07 12:58:27 by nchin            ###   ########.fr       */
+/*   Created: 2018/09/08 15:13:43 by nchin             #+#    #+#             */
+/*   Updated: 2018/09/08 18:18:25 by nchin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+int   check_ligne(char **grille, int valeur, int l, int h)
 {
-	*nbr = 42;
+	int i;
+	
+	i = 0;
+	while (i < 9)
+	{
+		if (grille[h][i] == valeur)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int		check_colonne(char **grille, int valeur, int l, int h)
+{
+	int i;
+
+	i = 0;
+	while (i < 9)
+	{
+		if (grille[i][h] == valeur)
+			return (0);
+		i++;
+	}
+	return (1);
 }
